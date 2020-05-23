@@ -13,6 +13,9 @@ Plugin can be found [here](http://www.wox.one/plugin/324).
 
 2.Press `Enter` key to kill selected application.
 
+### Commands
+`all` - kills all apps
+
 ### ChangeLogs
 1.0.0
 * Initial version
