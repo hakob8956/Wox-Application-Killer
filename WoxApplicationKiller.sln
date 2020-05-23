@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WoxApplicationKiller", "WoxApplicationKiller\WoxApplicationKiller.csproj", "{B8A52EFE-D76E-4AE6-B912-15A63796DBAB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B8A52EFE-D76E-4AE6-B912-15A63796DBAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8A52EFE-D76E-4AE6-B912-15A63796DBAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8A52EFE-D76E-4AE6-B912-15A63796DBAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8A52EFE-D76E-4AE6-B912-15A63796DBAB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E36424B4-7D03-4745-B717-32A3E5BA27EC}
+	EndGlobalSection
+EndGlobal
