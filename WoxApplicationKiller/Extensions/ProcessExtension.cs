@@ -19,19 +19,21 @@ namespace WoxApplicationKiller.Extensions
             }
         }
 
-        public static IEnumerable<ProcessInformation> GetProcessInformation(this IEnumerable<ProcessInformation> processes, string search)
+        public static List<ProcessInformation> GetProcessInformation(this IEnumerable<ProcessInformation> processes, string search)
         {
+            List<ProcessInformation> result;
             var searchBinder = BuilderBind.BuildSearchBinder(search);
 
             if (searchBinder.Id == null)
             {
-                return processes.Where(p => p.Name.ToLower().Contains(searchBinder.Name));
+                result = processes.Where(p => p.Name.ToLower().Contains(searchBinder.Name)).ToList();
             }
             else
             {
-                return processes.Where(p => p.Name.ToLower().Contains(searchBinder.Name) && p.Id.ToString().StartsWith(searchBinder.Id));
+                result = processes.Where(p => p.Name.ToLower().Contains(searchBinder.Name) && p.Id.ToString().StartsWith(searchBinder.Id)).ToList();
             }
 
+            return result;
 
         }
 

@@ -7,7 +7,7 @@ using WoxApplicationKiller.Extensions;
 
 namespace WoxApplicationKiller
 {
-    internal sealed class ProcessManager:IProcessManager
+    internal sealed class ProcessManager : IProcessManager
     {
         private ProcessType ProcessType { get; set; }
         public ProcessManager(ProcessType type)
@@ -15,7 +15,7 @@ namespace WoxApplicationKiller
             this.ProcessType = type;
         }
 
-        public  List<ProcessInformation> GetAllProcessesInfo()
+        public List<ProcessInformation> GetAllProcessesInfo()
         {
             List<ProcessInformation> processesInformation = new List<ProcessInformation>();
             try
@@ -42,10 +42,18 @@ namespace WoxApplicationKiller
         {
             Process.GetProcessById(id).Kill();
         }
+        public void KillProcesses(int[] ids = null)
+        {
+            var result = GetAllProcessesInfo();
+            if (ids != null)
+            {
+                result = result.Where(s => ids.Contains(s.Id)).ToList();
+            }
+            result.ForEach(p => KillProcess(p.Id));
+        }
         private string GetPath(Process p)
         {
             return p.MainModule?.FileName;
-
         }
 
     }
